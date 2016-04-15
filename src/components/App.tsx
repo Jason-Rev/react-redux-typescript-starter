@@ -5,17 +5,16 @@ import React = require('react');
 
 import {ApplicationState} from '../reducers/ApplicationState';
 import {ApplicationEvents} from '../events/ApplicationEvents';
-import {Row, Col} from 'revinate-react-shared-components';
 
 export interface AppProps extends ApplicationEvents, ApplicationState {}
 export function App(props: AppProps) {
     return (
         <div className="container">
-            <Row>
-                <Col>
-                    <h1>Survey Analytics Viewer</h1>
-                </Col>
-            </Row>
+            <div className="row">
+                <div className="col-md-12">
+                    <h1>React Redux Typescript Starter</h1>
+                </div>
+            </div>
         </div>
     );
 }

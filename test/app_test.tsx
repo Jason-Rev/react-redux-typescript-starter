@@ -3,9 +3,22 @@ import React = require('react');
 /* tslint:enable:no-unused-variable */
 import * as _ from 'lodash';
 import * as enzyme from 'enzyme';
-import * as chai from 'chai';
+import {expect} from 'chai';
 import * as sinon from 'sinon';
-import jsdom = require('mocha-jsdom');
-import {render} from '../src/app';
+import jsdomGlobal = require('jsdom-global');
+import {App} from '../src/components/App';
+
+jsdomGlobal();
+document.body.innerHTML = `<div id="app"></div>`;
+import {AppRoot} from '../src/app';
 
 
+describe('Top Level Application Test', () => {
+
+    it('shows how to shallow render the app', () => {
+        const wrapper = enzyme.shallow(
+            <AppRoot />
+        );
+        expect(wrapper.find(App)).to.have.length(1);
+    });
+});

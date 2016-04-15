@@ -6,7 +6,6 @@
     "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
     "react-redux": "github:DefinitelyTyped/DefinitelyTyped/react-redux/react-redux.d.ts#7b3d5a6ea5acda4a81f71309f1cc62354e63b681",
     "redux": "github:DefinitelyTyped/DefinitelyTyped/redux/redux.d.ts#7b3d5a6ea5acda4a81f71309f1cc62354e63b681",
-    "redux-thunk": "github:DefinitelyTyped/DefinitelyTyped/redux-thunk/redux-thunk.d.ts#75249b97104d00c1ca2451ac29369009a5f2b101",
     "whatwg-fetch": "github:DefinitelyTyped/DefinitelyTyped/whatwg-fetch/whatwg-fetch.d.ts#5d0f2126c8dac8fce0ff020218aea06607213b0d",
     "when": "github:DefinitelyTyped/DefinitelyTyped/when/when.d.ts#c393f8974d44840a6c9cc6d5b5c0188a8f05143d"
   },

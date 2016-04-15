@@ -28,16 +28,19 @@ const store = Redux.createStore(
 
 const actions = getApplicationEvents(store);
 
-export function render() {
+export function AppRoot() {
     const state = store.getState();
-    const rootElement = document.getElementById('app');
-    ReactDOM.render(
+    return (
         <div>
             <App {...state} {...actions} />
             <DevTools store={store}/>
-        </div>,
-        rootElement
+        </div>
     );
+}
+
+export function render() {
+    const rootElement = document.getElementById('app');
+    ReactDOM.render( <AppRoot />, rootElement );
 }
 
 // Link the renderer to the store.
