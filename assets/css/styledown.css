@@ -1,0 +1,316 @@
+/**
+ * Styledown
+ *
+ * This is the basic styles to make a Styledown document look like a proper
+ * style guide. Recommendation: use and remove any pieces as you see fit.
+ */
+
+/**
+ * Basic normalize
+ */
+
+h2.sg, h3.sg, ul.sg, p.sg {
+  margin: 20px 0;
+  line-height: 1.55;
+  color: #444;
+}
+h2.sg {
+  font-size: 2.2em;
+  font-weight: 100;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+h3.sg {
+  font-size: 2.5em;
+  font-family: LatoLight;
+  color: 444444;
+  border-bottom: solid 1px #979797;
+  display: block;
+  margin: 0 0 20px;
+  padding: 20px 0 5px;
+  line-height: 1.33;
+}
+
+/* Colors */
+p.sg, ul.sg {
+  color: #555;
+}
+h2.sg {
+  color: #111;
+}
+h3.sg {
+  color: #333;
+}
+strong.sg {
+  font-size: 1.1em;
+}
+
+code.sg {
+  background: rgba(250, 250, 250, 0.5);
+  color: #579;
+
+  padding: 2px 5px;
+  margin: 0 1px;
+  border-radius: 2px;
+  font-size: 0.8em;
+  font-family: menlo, monospace;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.01), inset -1px -1px rgba(0,0,0,0.01);
+}
+
+code.sg:first-child {
+  background: rgba(0, 100, 250, 0.1);
+  box-shadow: none;
+  color: #357;
+}
+
+.sg-block, .sg-code, .sg-canvas, .sg-text {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**
+ * An <h3> block.
+ *
+ * It looks like:
+ *
+ *     .sg-block
+ *       .sg-text       - text items
+ *         h3
+ *         p
+ *         ...
+ *       .sg-example
+ *         .sg-canvas   - canvas where its displayed
+ *         .sg-code     - code snippet
+ */
+
+.sg-block {
+ padding: 0 0 20px;
+}
+
+.sg-block:last-of-type {
+  padding-bottom: 20px;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.sg-block:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/**
+ * Text element
+ */
+
+@media (min-width: 768px) {
+  .sg-text {
+    float: left;
+    width: 26%;
+  }
+
+  .sg-text + .sg-example,
+  .sg-text + .sg-code {
+    float: right;
+    width: 70%;
+  }
+}
+
+.sg-text > :first-child {
+  margin-top: 0;
+}
+
+
+/**
+ * An example's canvas.
+ */
+
+.sg-canvas {
+  margin-bottom: 20px;
+}
+
+.sg-padded .sg-canvas {
+  padding: 20px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  overflow-x: auto;
+}
+
+/**
+ * The <pre> code that shows the sample.
+ */
+
+.sg-code {
+  border: solid 1px transparent;
+  overflow-x: auto;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+
+  margin: 0;
+  padding: 20px;
+
+  font-size: 0.85em;
+  font-family: menlo, monospace;
+  line-height: 1.5;
+  background: #f2f2f2;
+  color: #333;
+}
+
+/*
+ * Syntax highlighting
+ */
+
+.sg .hljs-tag,
+.sg .hljs-comment {
+  color: #999;
+}
+
+.sg .hljs-keyword,
+.sg .hljs-title {
+  color: #345;
+}
+
+.sg .hljs-attribute {
+  color: #59a;
+}
+
+.sg .hljs-string,
+.sg .hljs-number,
+.sg .hljs-value {
+  color: #3ac;
+}
+
+/*
+ * Code expansion
+ *
+ *     .sg-example
+ *       .sg-canvas
+ *       pre.sg-code
+ *       button.sg-expando
+ */
+
+.sg-code.sg-hidden {
+  display: none;
+}
+
+.sg-expando {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  background: transparent;
+
+  position: relative;
+  top: -10px;
+  left: -10px;
+  padding: 5px 10px;
+  margin-bottom: -20px;
+}
+
+.sg-expando-contract {
+  top: 0;
+  margin-bottom: 0;
+}
+
+.sg-expando:before {
+  content: '•••';
+  display: inline-block;
+
+  height: 16px;
+  width: 36px;
+  line-height: 16px;
+  text-align: center;
+
+  font-size: 10px;
+  background: #3BA1F8;
+  border-radius: 3px;
+  color: #fff;
+
+}
+
+.sg-expando:hover:before,
+.sg-expando:focus:before {
+  background: #0a89f6;
+}
+
+.sg-expando:active:before {
+  color: #fff;
+  background: #0a89f6;
+}
+
+.sg-expando-contract:before {
+  content: '\2715';
+}
+
+/*
+ * hover behavior
+ */
+
+
+#styleguide .sg-canvas .container {
+  width: 100% !important;
+  position: relative;
+}
+#styleguide .sg-canvas .l-app {
+  position: relative;
+  background: #F3F3F4;
+}
+#styleguide .sg-canvas .l-header {
+  position: relative;
+  z-index: 1;
+}
+#styleguide .l-main {
+  padding-bottom: 60px;
+  position: relative;
+}
+.sg-text, .sg-example {
+  float: none;
+  width: 100% !important;
+}
+#styleguide .styleguide-header {
+  background: #283745;
+  font-family: LatoLight, Helvetica, Arial, Sans-serif;
+}
+#styleguide .styleguide-header h1 {
+  color: #3cbfa2;
+  margin: 30px 0 10px;
+  font-size: 44px;
+  line-height: 1.33;
+}
+#styleguide .styleguide-header p {
+  color: white;
+}
+#styleguide .affix {
+  top: 20px;
+}
+#styleguide .sidebar-menu ul li a {
+  font-family: Lato;
+  color: #283767;
+  border-left: 3px solid transparent;
+  padding: 5px 15px;
+}
+#styleguide .sidebar-menu ul li a:hover, #styleguide .sidebar-menu ul li.active a {
+  font-family: LatoBold;
+  font-weight: bold;
+  background: transparent;
+  border-left-color: #3BA1F8;
+}
+#styleguide h2.sg {
+  margin-top: 0;
+}
+span.logo i {
+  color: #fff;
+  font-size: 1.2em;
+}
+#styleguide .l-footer i {
+  font-size: 2em;
+  color: #9b9b9b;
+}
+#styleguide .styleguide.col-sm-9 {
+  top: -20px;
+}
+#styleguide .row.show-grid > div {
+  background: #ccc;
+  border: 1px solid #444;
+}

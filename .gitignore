@@ -26,6 +26,12 @@ build/Release
 # Dependency directory
 node_modules
 
+# Typings directory
+typings
+
+# Build related items
+build
+
 # Optional npm cache directory
 .npm
 
