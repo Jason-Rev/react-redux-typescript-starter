@@ -4,5 +4,6 @@ export const Actions = {
     - Let's try to keep this list sorted alphabetically
      */
     APP_INIT: 'APP_INIT',
+    APP_CHANGE_TEXT: 'APP_CHANGE_TEXT',
 };
 
