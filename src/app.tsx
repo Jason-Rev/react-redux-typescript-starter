@@ -25,7 +25,6 @@ const store = Redux.createStore(
     )
 );
 
-
 const actions = getApplicationEvents(store);
 
 export function AppRoot() {
