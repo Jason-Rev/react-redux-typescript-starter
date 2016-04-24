@@ -1,7 +1,7 @@
 
 import {combineReducers } from 'redux';
-import {Action} from '../Actions/Action';
-import {isAppChangeTextAction} from '../Actions/Actions';
+import {Action} from '../actions/Action';
+import {isAppChangeTextAction} from '../actions/Actions';
 import {ApplicationState} from './ApplicationState';
 
 export const applyAction: (state, action) => ApplicationState = combineReducers({
