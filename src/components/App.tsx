@@ -5,33 +5,40 @@ import React = require('react');
 
 import {ApplicationState} from '../reducers/ApplicationState';
 import {ApplicationEvents} from '../events/ApplicationEvents';
-import {Panel, PanelBody, PanelHeading, PanelFooter} from './UiElements';
-import {Row, Col} from './UiElements';
 import {ExampleTextarea} from './ExampleTextarea';
+import {Grid, Row, Col, Panel} from 'react-bootstrap';
+import {AppNavBar} from './AppNavBar';
+import {AppJumbotron} from './AppJumbotron';
+import {AppFooter} from './AppFooter';
 
 export interface AppProps extends ApplicationEvents, ApplicationState {}
 export function App(props: AppProps) {
     return (
-        <div className="container">
-            <Row>
-                <Col md="10" mdOffset="1">
-                    <Panel>
-                        <PanelHeading>React Redux Typescript Starter</PanelHeading>
-                        <PanelBody>
+        <div>
+            <AppNavBar />
+            <AppJumbotron />
+
+            <Grid>
+                <Row>
+                    <Col md={10} mdOffset={1}>
+                        <Panel header={title} footer="Having fun with React.">
                             <Row>
-                                <Col md="6">
+                                <Col md={6}>
                                     <h2>Left</h2>
                                 </Col>
-                                <Col md="6">
+                                <Col md={6}>
                                     <h2>Right</h2>
                                 </Col>
                             </Row>
                             <ExampleTextarea text={props.text} onTextChangeEvent={props.onTextChangeEvent} />
-                        </PanelBody>
-                        <PanelFooter>Having fun with React.</PanelFooter>
-                    </Panel>
-                </Col>
-            </Row>
+                        </Panel>
+                    </Col>
+                </Row>
+                <hr />
+                <AppFooter />
+            </Grid>
         </div>
     );
 }
+
+const title = <h2>Simple Samples</h2>;
