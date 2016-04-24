@@ -1,10 +1,8 @@
 /* tslint:disable:no-unused-variable */
 import React = require('react');
 /* tslint:enable:no-unused-variable */
-import * as _ from 'lodash';
 import * as enzyme from 'enzyme';
 import {expect} from 'chai';
-import * as sinon from 'sinon';
 import jsdomGlobal = require('jsdom-global');
 import {App} from '../src/components/App';
 
