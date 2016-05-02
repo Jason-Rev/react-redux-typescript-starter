@@ -38,6 +38,7 @@
     "rx": "^4.1.0",
     "rx-dom": "^7.0.3",
     "rx-node": "^1.0.2",
+    "tsmerge": "^1.0.4",
     "whatwg-fetch": "^0.11.0"
   },
   "devDependencies": {
