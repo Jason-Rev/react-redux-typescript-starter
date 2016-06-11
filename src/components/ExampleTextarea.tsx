@@ -15,7 +15,7 @@ export function ExampleTextarea(props: ExampleTextareaProps) {
             <Row>
             <Col md={12}>
                 <p className="text-center">
-                    Example Text Areas sharing the same realtime content
+                    Example Text Areas sharing the same real time content
                 </p>
             </Col>
             </Row>

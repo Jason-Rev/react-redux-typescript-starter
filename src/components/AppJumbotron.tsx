@@ -10,7 +10,7 @@ export function AppJumbotron() {
         <Jumbotron>
             <h1>React-Redux-Typescript Starter App</h1>
             <p>
-                This is a working sample application to show one way of setting up React, Redux, and Typscript.
+                This is a working sample application to show one way of setting up React, Redux, and Typescript.
             </p>
         </Jumbotron>
     );

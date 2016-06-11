@@ -23,7 +23,7 @@ $ npm run test:w
 
 Run Unit test coverage:
 ```
-$ npm run conerage
+$ npm run coverage
 ```
 
 ### Debug Server:
@@ -53,9 +53,9 @@ Application State is only modified through the reducers using redux.store.dispat
 
 ### EventFunction
 EventsFunction when called create action or actions and dispatches them.
-It is the interface between the component and the Applicaton State.
-EventFunctions are used to make things happen.  Provides the sparation of concern
-between compoents and the Applicaton State.  EventFunctions are injected into components
+It is the interface between the component and the Application State.
+EventFunctions are used to make things happen.  Provides the separation of concern
+between components and the Application State.  EventFunctions are injected into components
 through their properties.
 
 ### AsyncAction
