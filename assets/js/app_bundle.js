@@ -34576,7 +34576,7 @@
 	var react_bootstrap_1 = __webpack_require__(554);
 	function ExampleTextarea(props) {
 	    var text = props.text, onTextChangeEvent = props.onTextChangeEvent;
-	    return (React.createElement(react_bootstrap_1.Row, {key: "ExampleTextarea"}, React.createElement(react_bootstrap_1.Row, null, React.createElement(react_bootstrap_1.Col, {md: 12}, React.createElement("p", {className: "text-center"}, "Example Text Areas sharing the same realtime content"))), React.createElement(react_bootstrap_1.Col, {key: "left", md: 6}, React.createElement("blockquote", null, "Text Box", React.createElement("textarea", {className: "form-control", defaultValue: text, onChange: onTextChangeEvent}))), React.createElement(react_bootstrap_1.Col, {key: "right", md: 6}, React.createElement("blockquote", null, React.createElement("p", null, text), React.createElement("footer", null, "Text Linked to the text area to the left.")))));
+	    return (React.createElement(react_bootstrap_1.Row, {key: "ExampleTextarea"}, React.createElement(react_bootstrap_1.Row, null, React.createElement(react_bootstrap_1.Col, {md: 12}, React.createElement("p", {className: "text-center"}, "Example Text Areas sharing the same real time content"))), React.createElement(react_bootstrap_1.Col, {key: "left", md: 6}, React.createElement("blockquote", null, "Text Box", React.createElement("textarea", {className: "form-control", defaultValue: text, onChange: onTextChangeEvent}))), React.createElement(react_bootstrap_1.Col, {key: "right", md: 6}, React.createElement("blockquote", null, React.createElement("p", null, text), React.createElement("footer", null, "Text Linked to the text area to the left.")))));
 	}
 	exports.ExampleTextarea = ExampleTextarea;
 
@@ -53269,7 +53269,7 @@
 	/* tslint:enable:no-unused-variable */
 	var react_bootstrap_1 = __webpack_require__(554);
 	function AppJumbotron() {
-	    return (React.createElement(react_bootstrap_1.Jumbotron, null, React.createElement("h1", null, "React-Redux-Typescript Starter App"), React.createElement("p", null, "This is a working sample application to show one way of setting up React, Redux, and Typscript.")));
+	    return (React.createElement(react_bootstrap_1.Jumbotron, null, React.createElement("h1", null, "React-Redux-Typescript Starter App"), React.createElement("p", null, "This is a working sample application to show one way of setting up React, Redux, and Typescript.")));
 	}
 	exports.AppJumbotron = AppJumbotron;
 
