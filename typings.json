@@ -22,6 +22,5 @@
     "sinon": "registry:dt/sinon#1.16.0+20160317120654"
   },
   "dependencies": {
-    "object-assign": "registry:npm/object-assign#4.0.1+20160301180549"
   }
 }
